@@ -8,8 +8,6 @@ export default defineConfig({
     include: ['lucide-react','react', 'react-dom'],
   },
   server: {
-    cors: {
-      origin: 'neco-arc.fr'
-    }
+    cors: true,
   }
 });
