@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/NecoArcZone',
+  base: '/NecoArcZone/',
   optimizeDeps: {
     include: ['lucide-react','react', 'react-dom'],
   },
