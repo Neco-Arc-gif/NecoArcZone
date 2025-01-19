@@ -20,6 +20,8 @@ const AppContent: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation(); // Access the current route location
 
+  const [audioRef, setAudioRef] = useState<HTMLAudioElement | null>(null);
+
   useEffect(() => {
     if (!showHome) {
       navigate('/');
@@ -29,6 +31,22 @@ const AppContent: React.FC = () => {
   useEffect(() => {
     setIsRainbow(clickCount > 10);
   }, [clickCount]);
+
+  // Fade in the audio volume
+  useEffect(() => {
+    if (audioRef && !isMuted) {
+      audioRef.volume = 0; // Start at volume 0
+      let currentVolume = 0;
+      const fadeInInterval = setInterval(() => {
+        if (currentVolume < 0.3) {
+          currentVolume += 0.1; // Gradually increase volume
+          audioRef.volume = Math.min(currentVolume, 1); // Cap at 1
+        } else {
+          clearInterval(fadeInInterval); // Clear interval when volume reaches 1
+        }
+      }, 200); // Adjust the interval for smoother or faster fade-in
+    }
+  }, [audioRef, isMuted]);
 
   return (
     <>
@@ -46,6 +64,7 @@ const AppContent: React.FC = () => {
               autoPlay
               loop
               muted={isMuted}
+              ref={(ref) => setAudioRef(ref)} // Attach the audio element to the state
             />
           )}
 
