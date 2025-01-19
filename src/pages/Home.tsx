@@ -30,17 +30,6 @@ const Home: React.FC<HomeProps> = ({ showHome, setShowHome, clickCount, setClick
 
   useEffect(() => {
     document.title = showHome ? 'BURENYUUUUUUUUU' : '?';
-    
-    // Check if the meta tag with the description attribute already exists
-    const existingMeta = document.querySelector('meta[name="description"]');
-
-    if (!existingMeta) {
-      // Create a new meta tag only if it doesn't exist
-      var meta = document.createElement('meta');
-      meta.setAttribute('name', 'description');
-      meta.setAttribute('content', 'Dubidubidu, Chipi Chipi Chapa Chapa');
-      document.getElementsByTagName('head')[0].appendChild(meta);
-    }
 
   }, [showHome])
 
