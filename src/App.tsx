@@ -82,7 +82,7 @@ const AppContent: React.FC = () => {
 
 const App: React.FC = () => (
   <MusicProvider>
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <AppContent />
     </Router>
   </MusicProvider>
