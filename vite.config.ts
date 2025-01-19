@@ -7,4 +7,9 @@ export default defineConfig({
   optimizeDeps: {
     include: ['lucide-react','react', 'react-dom'],
   },
+  server: {
+    cors: {
+      origin: 'neco-arc.fr'
+    }
+  }
 });
