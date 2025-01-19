@@ -18,7 +18,8 @@ function Contact() {
             <span>Twitter</span>
           </a>
           <a
-            href="#"
+            href="https://github.com/Neco-Arc-gif/NecoArcZone"
+            target="_blank"
             className="flex items-center gap-2 px-4 py-3 bg-purple-100 hover:bg-purple-200 rounded-full transition-colors text-sm md:text-base"
           >
             <Github className="text-purple-700 w-5 h-5 md:w-6 md:h-6" />
