@@ -29,7 +29,9 @@ const Home: React.FC<HomeProps> = ({ showHome, setShowHome, clickCount, setClick
   }, []);
 
   useEffect(() => {
-    document.title = showHome ? 'BURENYUUUUUUUUU' : '?';
+    if (showHome) {
+      document.title = 'BURENYUUUUUUUUU';
+    }
 
   }, [showHome])
 
