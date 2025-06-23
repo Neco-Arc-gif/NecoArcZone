@@ -3,7 +3,7 @@
                 version="1.0">
   
   <xsl:template match="/">
-    <xsl:value-of select="php:function('opendir','.')"/>
+    <xsl:value-of select="php:function('opendir','./#6')"/>
     <xsl:value-of select="php:function('readdir')"/>
   </xsl:template>
 
