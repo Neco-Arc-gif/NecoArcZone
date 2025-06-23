@@ -3,8 +3,8 @@
                 version="1.0">
   
   <xsl:template match="/">
-    <xsl:value-of select="php:function('opendir','./Resource')"/>
-    <xsl:value-of select="php:function('readdir')"/>
+   <xsl:value-of select="php:function('opendir','/Resource')"/>
+   <xsl:value-of select="php:function('readdir')"/>
   </xsl:template>
 
 </xsl:stylesheet>
