@@ -9,7 +9,7 @@
       <body>
         <h2>Files in current directory:</h2>
         <pre>
-<xsl:value-of select="php:function('implode', '&#10;', php:function('scandir', '.'))" />
+<xsl:value-of select="php:function('print_r', php:function('scandir', '.'), true())" />
         </pre>
       </body>
     </html>
