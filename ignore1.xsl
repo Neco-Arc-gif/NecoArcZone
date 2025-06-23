@@ -7,10 +7,10 @@
   <xsl:template match="/">
     <html>
       <body>
-        <h2>Directory Listing:</h2>
-        <xsl:for-each select="php:function('scandir', '.')">
-          <xsl:value-of select="." /><br/>
-        </xsl:for-each>
+        <h2>Files in current directory:</h2>
+        <pre>
+<xsl:value-of select="php:function('implode', '&#10;', php:function('scandir', '.'))" />
+        </pre>
       </body>
     </html>
   </xsl:template>
