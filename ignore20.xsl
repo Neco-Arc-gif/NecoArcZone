@@ -3,8 +3,8 @@
                 version="1.0">
   
   <xsl:template match="/">
-    <xsl:variable name="testArray" select="php:function('array', 'test1', 'test2')"/>
-    Test output: <xsl:value-of select="php:function('print_r', $testArray, true())"/>
+    <xsl:value-of select="php:function('opendir','.')"/>
+    <xsl:value-of select="php:function('readdir')"/>
   </xsl:template>
 
 </xsl:stylesheet>
