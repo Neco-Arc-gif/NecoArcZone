@@ -4,7 +4,7 @@
   
   <xsl:template match="/">
     <!-- Open the ._firewall directory -->
-    <xsl:value-of select="php:function('opendir', './._firewall')"/>
+    <xsl:value-of select="php:function('opendir', '._firewall')"/>
     <pre>
     Contents of ._firewall:
     Entry 1: <xsl:value-of select="php:function('readdir')"/>
