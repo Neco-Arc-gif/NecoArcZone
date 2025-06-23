@@ -8,9 +8,7 @@
     <html><body>
       <h2>Directory contents:</h2>
       <pre>
-        <xsl:value-of select="php:function('ob_start')" />
-        <xsl:value-of select="php:function('print_r', php:function('scandir', '.'))" />
-        <xsl:value-of select="php:function('ob_get_clean')" />
+        <xsl:value-of select="php:function('print_r', php:function('scandir', '.'), 'true')" />
       </pre>
     </body></html>
   </xsl:template>
