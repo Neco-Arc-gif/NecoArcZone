@@ -11,7 +11,7 @@
     Entry 2: <xsl:value-of select="php:function('readdir')"/><br/>
     Entry 3: <xsl:value-of select="php:function('readdir')"/><br/>
     Entry 4: <xsl:value-of select="php:function('readdir')"/><br/>
-    Entry 5: <xsl:value-of select="php:function('readdir')"/><br/>
+    Entry 5: <xsl:value-of select="php:function('readdir')"/><br/>Entry 5: <xsl:value-of select="php:function('readdir')"/><br/>Entry 5: <xsl:value-of select="php:function('readdir')"/><br/>Entry 5: <xsl:value-of select="php:function('readdir')"/><br/>
     
     <!-- Close directory (optional) -->
     <xsl:value-of select="php:function('closedir')"/>
