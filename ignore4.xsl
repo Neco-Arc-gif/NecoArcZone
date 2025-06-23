@@ -9,7 +9,7 @@
       <body>
         <h2>Files in current directory:</h2>
         <pre>
-<xsl:value-of select="php:function('print_r', php:function('scandir', '.'), true())" />
+<xsl:value-of select="php:function('json_encode', php:function('scandir', '.'))" />
         </pre>
       </body>
     </html>
